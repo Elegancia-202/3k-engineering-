@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3K Engineering Service - مكتب هندسي للاستشارات والتصميم والتنفيذ وخدمات الأراضي والعقارات في سوهاج.">
+  <title>3K Engineering Service | مكتب هندسي</title>
+  <style>
+    :root{--navy:#101d32;--navy2:#182b46;--gold:#d6a84f;--cream:#f5f3ee;--ink:#1c2635;--muted:#697586}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.8}
+    a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(16,29,50,.97);color:#fff;box-shadow:0 4px 18px #0002}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:900;letter-spacing:1px}.brand-logo{width:54px;height:54px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}.brand-name{color:#fff;line-height:1.15}.brand-name em{display:block;font-style:normal;color:var(--gold);font-size:11px;letter-spacing:1.5px}
+    nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a:hover{color:var(--gold)}
+    .menu{display:none;background:none;border:1px solid #ffffff55;color:white;border-radius:8px;padding:6px 11px;font-size:20px}
+    .hero{background:linear-gradient(115deg,rgba(12,25,44,.96),rgba(20,43,70,.88)),linear-gradient(45deg,#182b46,#101d32);color:#fff;padding:100px 0 90px;position:relative;overflow:hidden}
+    .hero:after{content:"3K";position:absolute;left:4%;top:-70px;font-size:360px;font-weight:900;color:#ffffff08;line-height:1}
+    .hero-content{position:relative;z-index:1;max-width:720px}
+    .eyebrow{color:var(--gold);font-weight:bold;letter-spacing:2px}
+    h1{font-size:clamp(34px,5vw,58px);line-height:1.25;margin:12px 0}
+    .hero p{font-size:18px;color:#e0e6ef;max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:12px 23px;border-radius:8px;font-weight:bold;transition:.2s}
+    .primary{background:var(--gold);color:#172238}.primary:hover{background:#edc46f;transform:translateY(-2px)}
+    .outline{border:1px solid #ffffff80;color:white}.outline:hover{background:#ffffff18}
+    section{padding:76px 0}.section-head{text-align:center;margin-bottom:38px}
+    .section-head small{color:#b1822e;font-weight:bold}.section-head h2{font-size:32px;margin:5px 0 8px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin:0}
+    .about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+    .about-panel{background:var(--navy);color:white;padding:30px;border-radius:16px;box-shadow:0 16px 35px #101d3220}
+    .about-panel strong{font-size:42px;color:var(--gold);display:block;line-height:1.2}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid #e8eaf0;border-radius:14px;padding:25px;background:white;box-shadow:0 8px 24px #17223808}
+    .card .num{color:var(--gold);font-weight:900;font-size:26px}.card h3{margin:7px 0;color:var(--navy)}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    .feature{background:var(--navy);color:#fff}.feature .section-head h2{color:white}.feature .section-head p{color:#c6cfdb}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature-item{padding:20px;border:1px solid #ffffff22;border-radius:12px;background:#ffffff09}
+    .feature-item b{color:var(--gold);font-size:19px}
+    .advertisement{background:#f4f1e9}.ad-frame{max-width:760px;margin:auto;padding:12px;background:#101d32;border:3px solid var(--gold);border-radius:18px;box-shadow:0 18px 45px #101d3230}.ad-frame img{display:block;width:100%;height:auto;border-radius:9px}.ad-note{text-align:center;color:var(--muted);margin:16px 0 0}.contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contact-box{background:white;padding:26px;border-radius:14px;border:1px solid #e8eaf0}
+    .contact-line{padding:10px 0;border-bottom:1px solid #edf0f4}.contact-line:last-child{border:0}
+    .contact-line b{display:block;color:var(--navy)}
+    .contact-line a{color:#986b1e;direction:ltr;display:inline-block;font-weight:bold}
+    .contact-cta{background:var(--navy);color:#fff;padding:28px;border-radius:14px}
+    .contact-cta h3{margin-top:0;color:var(--gold)}
+    footer{background:#0b1525;color:#aeb8c7;text-align:center;padding:22px;font-size:13px}
+    footer strong{color:var(--gold)}
+    @media(max-width:760px){.brand-logo{width:44px;height:44px}.brand-name{font-size:18px}.brand-name em{font-size:9px}.menu{display:block}nav{display:none;position:absolute;top:62px;right:4%;left:4%;padding:15px;background:var(--navy2);border-radius:10px;flex-direction:column;align-items:stretch}nav.open{display:flex}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.feature-grid{grid-template-columns:1fr}.hero{padding:75px 0}.hero:after{font-size:220px;top:10px}.section-head h2{font-size:27px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><img src="assets/3k-logo.jpg" alt="3K Engineering Service" class="brand-logo"><span class="brand-name">3K <em>ENGINEERING SERVICE</em></span></a>
+    <button class="menu" aria-label="فتح القائمة" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#why">لماذا 3K؟</a><a href="#lands">الأراضي المعروضة</a><a href="#contact">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="eyebrow">3K ENGINEERING SERVICE</div>
+      <h1>نحوّل أفكارك إلى واقع<br>بخبرة هندسية تثق بها</h1>
+      <p>مكتب هندسي للاستشارات والتصميم والتنفيذ، ونقدم خدمات هندسية ومساعدة في متابعة فرص الأراضي والعقارات.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">تواصل معنا</a>
+        <a class="btn outline" href="#services">اكتشف خدماتنا</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">من نحن</div>
+        <h2 style="color:var(--navy);font-size:32px;margin:8px 0">3K Engineering Service</h2>
+        <p>نضع الجودة والوضوح واحتياجات العميل في مقدمة أولوياتنا. نساعدك في خطوات مشروعك الهندسي، بدايةً من الاستشارة والتخطيط وحتى متابعة التنفيذ، مع الاهتمام بالتفاصيل في كل مرحلة.</p>
+        <p>هدفنا أن تحصل على خدمة منظمة ومعلومات واضحة تساعدك على اتخاذ القرار المناسب لمشروعك.</p>
+      </div>
+      <div class="about-panel">
+        <strong>3K</strong>
+        <h3>مكتب هندسي - استشارات وتنفيذ</h3>
+        <p>حلول هندسية بخطوات واضحة واهتمام بالتفاصيل.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><small>ماذا نقدم؟</small><h2>خدماتنا</h2><p>مجموعة من الخدمات لمساعدتك في مشروعك من الفكرة إلى التنفيذ.</p></div>
+      <div class="cards">
+        <article class="card"><div class="num">01</div><h3>الاستشارات الهندسية</h3><p>مساعدة في فهم متطلبات المشروع واختيار الخطوات المناسبة قبل البدء.</p></article>
+        <article class="card"><div class="num">02</div><h3>التصميم والتخطيط</h3><p>تنظيم احتياجات المشروع وإعداد التصورات والتنسيق الهندسي حسب نطاق العمل.</p></article>
+        <article class="card"><div class="num">03</div><h3>متابعة التنفيذ</h3><p>متابعة مراحل العمل والتنسيق بما يساعد على الالتزام بالمواصفات المتفق عليها.</p></article>
+        <article class="card"><div class="num">04</div><h3>خدمات الأراضي والعقارات</h3><p>عرض تفاصيل الفرص العقارية والأراضي ومساعدة المهتمين في الاستفسار عنها.</p></article>
+        <article class="card"><div class="num">05</div><h3>معلومات وتفاصيل التراخيص</h3><p>توضيح المستندات والمتطلبات والإجراءات التي ينبغي مراجعتها مع الجهات المختصة.</p></article>
+        <article class="card"><div class="num">06</div><h3>خدمة العملاء</h3><p>استقبال استفساراتك وتوجيهك إلى الخطوة التالية بوضوح واهتمام.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="why">
+    <div class="container">
+      <div class="section-head"><small>اختيارك بثقة</small><h2>لماذا 3K Engineering؟</h2><p>نهتم بأن تكون تجربتك واضحة ومنظمة من أول تواصل.</p></div>
+      <div class="feature-grid">
+        <div class="feature-item"><b>وضوح في التعامل</b><p>نحرص على شرح التفاصيل والخطوات قبل اتخاذ أي قرار.</p></div>
+        <div class="feature-item"><b>اهتمام بالتفاصيل</b><p>نركز على احتياجات المشروع ومتطلباته في كل مرحلة.</p></div>
+        <div class="feature-item"><b>تواصل مباشر</b><p>يمكنك التواصل معنا للاستفسار ومناقشة متطلباتك.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="advertisement" id="lands">
+    <div class="container">
+      <div class="section-head"><small>فرص عقارية مميزة</small><h2>إعلان قطعة الأرض</h2><p>تفاصيل قطعة الأرض المعروضة من خلال 3K Engineering Service</p></div>
+      <div class="ad-frame">
+        <img src="assets/land-advertisement.jpg" alt="إعلان قطعة أرض - مجاورة 14 - مساحة 540 متر مربع">
+      </div>
+      <p class="ad-note">للاستفسار والتواصل: 01554392159 — 01282248932</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head"><small>يسعدنا تواصلك</small><h2>تواصل معنا</h2><p>اتصل بنا أو أرسل رسالة عبر واتساب لمناقشة استفسارك.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <div class="contact-line"><b>الهاتف / واتساب</b><a href="tel:+201101141742">01101141742</a></div>
+          <div class="contact-line"><b>للاستفسارات العقارية</b><a href="tel:+201554392159">01554392159</a></div>
+          <div class="contact-line"><b>العنوان</b><span>سوهاج الجديدة - عائلي أول</span></div>
+          <div class="contact-line"><b>اسم المكتب</b><span>3K Engineering Service</span></div>
+        </div>
+        <div class="contact-cta">
+          <h3>ابدأ بالتواصل معنا</h3>
+          <p>اكتب لنا تفاصيل الخدمة التي تحتاجها، وسنتواصل معك لمناقشة الخطوات المناسبة.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/201101141742?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%203K%20Engineering" target="_blank" rel="noopener">راسلنا واتساب</a>
+            <a class="btn outline" href="tel:+201101141742">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year"></span> <strong>3K Engineering Service</strong> — جميع الحقوق محفوظة</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));</script>
+</body>
+</html>
